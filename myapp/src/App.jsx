@@ -1,8 +1,14 @@
 import React from 'react';
+import { Footer, Header } from './components/index';
+import {Outlet} from 'react-router-dom';
 
 function App() {
   return (
-    <h1 class="text-3xl font-bold underline"> Hello world!</h1>
+    <>
+      <Header />
+        <Outlet />
+      <Footer />
+    </>
   );
 }
 
