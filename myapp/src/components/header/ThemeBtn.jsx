@@ -1,62 +1,24 @@
-import React,{useState} from 'react';
-import styled from 'styled-components';
+import React from 'react';
 
-const Switch = () => {
-    const [theme, setTheme] = useState('dark');
+function ThemeBtn() {
   return (
-    <StyledWrapper>
-      <input type="checkbox" className="theme-checkbox" onClick={setTheme((prevTheme)=>(!prevTheme))}/>
-    </StyledWrapper>
-  );
+    <div> 
+      <label className="relative inline-flex items-center cursor-pointer">
+        <input className="sr-only peer" value="" type="checkbox" />
+        <div
+          className="w-12 h-6 rounded-full ring-0 peer duration-500 outline-none bg-gray-200 overflow-hidden 
+          before:flex before:items-center before:justify-center after:flex after:items-center 
+          after:justify-center before:content-['☀️'] before:absolute before:h-4 before:w-4 before:top-1/2 
+          before:bg-white before:rounded-full before:left-1 before:-translate-y-1/2 before:transition-all before:duration-700 
+          peer-checked:before:opacity-0 peer-checked:before:rotate-90 peer-checked:before:-translate-y-full shadow-lg shadow-gray-400 peer-checked:shadow-lg
+          peer-checked:shadow-gray-700 peer-checked:bg-[#383838] after:content-['🌑'] after:absolute after:bg-[#1d1d1d] after:rounded-full 
+          after:top-[4px] after:right-1 after:translate-y-full after:w-4 after:h-4 after:opacity-0 after:transition-all after:duration-700 peer-checked:after:opacity-100 
+          peer-checked:after:rotate-180 peer-checked:after:translate-y-0"
+        ></div>
+      </label>
+
+    </div>
+  )
 }
 
-const StyledWrapper = styled.div`
-  .theme-checkbox {
-    --toggle-size: 16px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 6.25em;
-    height: 3.125em;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
-    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
-    background-size: 205%;
-    background-position: 0;
-    -webkit-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 99em;
-    position: relative;
-    cursor: pointer;
-    font-size: var(--toggle-size);
-  }
-
-  .theme-checkbox::before {
-    content: "";
-    width: 2.25em;
-    height: 2.25em;
-    position: absolute;
-    top: 0.438em;
-    left: 0.438em;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
-    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
-    background-size: 205%;
-    background-position: 100%;
-    border-radius: 50%;
-    -webkit-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
-  }
-
-  .theme-checkbox:checked::before {
-    left: calc(100% - 2.25em - 0.438em);
-    background-position: 0;
-  }
-
-  .theme-checkbox:checked {
-    background-position: 100%;
-  }`;
-
-export default Switch;
+export default ThemeBtn;
