@@ -6,7 +6,7 @@ import { CiMail, CiPhone } from "react-icons/ci";
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-950 dark:bg-black w-full reounded-t-lg dark:border-t dark:border-gray-500/50">
+    <footer className="bg-gray-800 dark:bg-black w-full reounded-t-lg dark:border-t dark:border-gray-500/50">
       <Container className="mx-auto px-4 py-12">
         <div className="flex flex-col items-center space-y-8">
           <Link to="/" className="text-2xl font-bold text-orange-500">
