@@ -11,14 +11,12 @@ export default function Header() {
     <nav className="fixed top-0 w-full z-50 bg-white dark:bg-black/50 backdrop-blur-lg border-b border-gray-300 dark:border-white/10">
       <Container className="mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <Link to="/" className="text-xl font-bold text-blue-600 dark:text-orange-500">
             Portfolio
           </Link>
           <div className='flex justify-center items-center pr-2'>
             <ThemeBtn />
           </div>
-          {/* Desktop Navigation & ThemeBtn */}
           <div className="hidden md:flex items-center space-x-6">
             {NavItem.map((item) => (
               <Link
@@ -35,13 +33,11 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={() => setIsMenuOpen((prev) => !prev)}>
             {isMenuOpen ? <X className="text-black dark:text-white" /> : <Menu className="text-black dark:text-white" />}
           </button>
         </div>
 
-        {/* Mobile Navigation Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4">
             {NavItem.map((item) => (
