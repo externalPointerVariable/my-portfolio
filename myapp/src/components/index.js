@@ -2,8 +2,7 @@ import Container from './container/Container';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 import Logo from './Logo';
-import NavItem from './NavItems';
-import ThemeBtn from './header/ThemeBtn';
+import NavItems from './NavItems';
 import Skills  from './Skills';
 import SoftSkills  from './SoftSkills';
 import ContactForm from './ContactForm';
@@ -15,8 +14,7 @@ export {
     Footer,
     Header,
     Logo,
-    NavItem,
-    ThemeBtn,
+    NavItems,
     Skills,
     SoftSkills,
     ContactForm,

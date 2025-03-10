@@ -21,7 +21,10 @@ export default function Home() {
           }}
         >
           <div className="space-y-2">
-            <motion.h2 className="text-2xl text-gray-800 font-mono dark:text-gray-400" variants={fadeInUp}>
+            <motion.h2
+              className="text-2xl text-gray-800 font-mono dark:text-gray-400"
+              variants={fadeInUp}
+            >
               Hi, I am
             </motion.h2>
             <motion.h1
@@ -34,9 +37,18 @@ export default function Home() {
 
           <motion.div className="flex gap-4" variants={fadeInUp}>
             {[
-              { href: "https://instagram.com", icon: <FaInstagram className="w-5 h-5"/> },
-              { href: "https://linkedin.com", icon: <FaLinkedin className="w-5 h-5"/> },
-              { href: "https://x.com", icon: <FaXTwitter className="w-5 h-5"/> },
+              {
+                href: "https://instagram.com",
+                icon: <FaInstagram className="w-5 h-5" />,
+              },
+              {
+                href: "https://linkedin.com",
+                icon: <FaLinkedin className="w-5 h-5" />,
+              },
+              {
+                href: "https://x.com",
+                icon: <FaXTwitter className="w-5 h-5" />,
+              },
             ].map(({ href, icon }, index) => (
               <a
                 key={index}
@@ -74,7 +86,7 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          className="flex-1 relative aspect-square"
+          className="flex-1 relative aspect-square hidden sm:block" // 👈 Hide on small screens
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -82,7 +94,11 @@ export default function Home() {
           <motion.div
             className="absolute inset-0 rounded-full bg-gradient-to-br from-orange-500/20 to-transparent"
             animate={{ scale: [1, 1.01, 1], opacity: [0.5, 0.8, 0.5] }}
-            transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
           />
           <img
             src="/placeholder.svg"

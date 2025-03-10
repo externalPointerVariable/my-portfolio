@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { NavItem, Container, ThemeBtn } from '../index';
+import { NavItems, Container} from '../index';
+import ThemeBtn from "./ThemeBtn";
 
 export default function Header() {
   const location = useLocation();
@@ -18,7 +19,7 @@ export default function Header() {
             <ThemeBtn />
           </div>
           <div className="hidden md:flex items-center space-x-6">
-            {NavItem.map((item) => (
+            {NavItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
@@ -40,7 +41,7 @@ export default function Header() {
 
         {isMenuOpen && (
           <div className="md:hidden py-4">
-            {NavItem.map((item) => (
+            {NavItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}

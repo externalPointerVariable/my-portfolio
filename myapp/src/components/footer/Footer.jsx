@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaXTwitter, FaFacebook, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
-import { Container, Logo, NavItem } from '../index';
+import { Container, Logo, NavItems } from '../index';
 import { CiMail, CiPhone } from "react-icons/ci";
 
 export default function Footer() {
@@ -16,7 +16,7 @@ export default function Footer() {
           </Link>
 
           <nav className="flex flex-wrap justify-center gap-8">
-            {NavItem.map((item) => (
+            {NavItems.map((item) => (
               <Link 
                 key={item.name} 
                 to={item.path} 
