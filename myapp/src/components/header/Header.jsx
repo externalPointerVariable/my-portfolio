@@ -8,10 +8,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white dark:bg-black/50 backdrop-blur-lg border-b border-gray-300 dark:border-white/10">
+    <nav className="fixed top-0 w-full z-50 bg-white/50 dark:bg-black/50 backdrop-blur-lg border-b border-black/10 dark:border-white/10">
       <Container className="mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-xl font-bold text-blue-600 dark:text-orange-500">
+          <Link to="/" className="text-xl font-bold text-orange-600 dark:text-orange-500">
             Portfolio
           </Link>
           <div className='flex justify-center items-center pr-2'>
@@ -22,9 +22,9 @@ export default function Header() {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`hover:text-blue-600 dark:hover:text-orange-500 transition-colors ${
+                className={`hover:text-orange-600 dark:hover:text-orange-500 transition-colors ${
                   location.pathname === item.path
-                    ? 'text-blue-600 dark:text-orange-500'
+                    ? 'text-orange-600 dark:text-orange-500'
                     : 'text-gray-800 dark:text-white'
                 }`}
               >

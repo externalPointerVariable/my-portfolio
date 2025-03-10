@@ -3,7 +3,9 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App.jsx';
-import {Home, Portfolio, AboutMe, Skills} from './pages/index.js';
+import {Home, Portfolio, About, Skills} from './pages/index.js';
+import {Provider} from 'react-redux';
+import store from './store/store.js';
 
 const rooutes = createBrowserRouter([{
   path: '/',
@@ -15,7 +17,7 @@ const rooutes = createBrowserRouter([{
     },
     {
       path:'/about',
-      element: <AboutMe />
+      element: <About />
     },
     {
       path:'/skills',
@@ -30,6 +32,8 @@ const rooutes = createBrowserRouter([{
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={rooutes} />
+    <Provider store={store}>
+      <RouterProvider router={rooutes} />
+    </Provider>
   </StrictMode>,
 )
