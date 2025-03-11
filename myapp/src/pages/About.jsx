@@ -20,7 +20,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="min-h-screen pt-16 pb-20 container mx-auto px-4 dark:bg-black dark:text-white">
+    <div className="min-h-screen pt-16 pb-20 container mx-auto px-4 dark:bg-black dark:text-white min-w-full">
       <div className="py-8 md:py-20 flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div
           className={`relative w-full max-w-md aspect-[3/4] md:aspect-auto md:h-full transition-opacity transform ${

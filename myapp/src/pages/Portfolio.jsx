@@ -13,7 +13,7 @@ export default function Portfolio() {
   );
 
   return (
-    <div className="min-h-screen pt-16 container mx-auto px-4 dark:bg-black">
+    <div className="min-h-screen pt-16 container mx-auto px-4 dark:bg-black min-w-full">
       <div className="py-20 space-y-12">
         <motion.h1
           className={`text-5xl font-bold text-center bg-gradient-to-r from-gray-200 via-orange-500 to-orange-600 text-transparent bg-clip-text transition-all duration-300 ${

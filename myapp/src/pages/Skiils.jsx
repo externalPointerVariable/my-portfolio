@@ -3,7 +3,7 @@ import { Skills, SoftSkills, TechMarquee } from "../components/index";
 
 export default function SkillsPage() {
   return (
-    <div className="min-h-screen pt-16 pb-20 dark:bg-black">
+    <div className="min-h-screen pt-16 pb-20 dark:bg-black min-w-full">
       <div className="container mx-auto px-4">
         <motion.h1
           className="text-4xl font-bold text-center mb-12 dark:text-white"

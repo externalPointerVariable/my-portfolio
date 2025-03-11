@@ -11,7 +11,7 @@ const fadeInUp = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen pt-16 container mx-auto px-4 dark:bg-black">
+    <div className="min-h-screen pt-16 container mx-auto px-4 dark:bg-black min-w-full">
       <div className="flex flex-col-reverse lg:flex-row items-center gap-12 py-20">
         <motion.div
           className="flex-1 space-y-8"
