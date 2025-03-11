@@ -2,11 +2,16 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const skills = [
-  { name: "Figma", progress: 100 },
-  { name: "Adobe XD", progress: 100 },
-  { name: "Adobe Photoshop", progress: 85 },
-  { name: "Adobe Illustrator", progress: 60 },
-  { name: "Adobe Premiere", progress: 70 },
+  { name: "JavaScript", progress: 95 },
+  { name: "TypeScript", progress: 85 },
+  { name: "Python", progress: 90 },
+  { name: "Java", progress: 85 },
+  { name: "C++", progress: 80 },
+  { name: "C", progress: 75 },
+  { name: "SQL", progress: 85 },
+  { name: "PHP", progress: 70 },
+  { name: "Shell Scripting", progress: 65 },
+  { name: "Rust", progress: 60 },
 ];
 
 export default function Skills() {

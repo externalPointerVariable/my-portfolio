@@ -45,21 +45,17 @@ export default function About() {
         >
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold">About Me</h1>
-            <h2 className="text-xl text-gray-400">
-              User Interface And User Experience And Also Video Editing
+            <h2 className="text-xl dark:text-gray-400 text-gray-700">
+            Software Engineer | Frontend & Backend Developer
             </h2>
           </div>
 
-          <p className="text-gray-300 leading-relaxed">
-            A software engineer, the modern-day architect of digital realms,
-            navigates the ethereal landscapes of code, sculpting intangible
-            structures that shape our technological world.
+          <p className="dark:text-gray-300 text-gray-500 leading-relaxed">
+          Passionate about crafting intuitive user experiences and scalable backend solutions. I specialize in full-stack development, bringing together modern frameworks and best practices to create seamless applications.
           </p>
 
-          <p className="text-gray-300 leading-relaxed">
-            Their canvas is a screen, a vast expanse where lines of code dance
-            in intricate patterns, weaving the fabric of programs and
-            applications.
+          <p className="dark:text-gray-300 text-gray-500 leading-relaxed">
+          With experience in frontend and backend technologies, I love solving complex problems, optimizing performance, and continuously learning new technologies to stay ahead in the evolving tech landscape.
           </p>
 
           <button className="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white dark:text-white rounded-lg hover:bg-orange-600 transition">

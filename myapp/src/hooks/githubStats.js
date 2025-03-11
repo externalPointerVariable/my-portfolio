@@ -14,9 +14,8 @@ const GithubProfile = async () => {
 };
 
 const GithubHeatMap = async () => {
-  const username = "externalPointerVariable";
   const query = `{
-    user(login: "${username}") {
+    user(login: "externalPointerVariable") {
       contributionsCollection {
         contributionCalendar {
           totalContributions
@@ -40,14 +39,20 @@ const GithubHeatMap = async () => {
         Authorization: `Bearer ${config.personalAccessToken}`,
       },
       body: JSON.stringify({ query }),
-    })
-      .then((response) => response.json())
-      .then(
-        (data) => data.data.user.contributionsCollection.contributionCalendar
-      );
-    return res;
+    });
+
+    const json = await res.json();
+    console.log("GitHub API Response:", json); // ✅ Check full response
+
+    if (!json || !json.data || !json.data.user) {
+      console.error("Invalid API response:", json);
+      throw new Error("GitHub API returned invalid or missing data.");
+    }
+
+    return json.data.user.contributionsCollection.contributionCalendar;
   } catch (error) {
-    console.log(error);
+    console.error("Error fetching GitHub Heatmap:", error);
+    return null; // Prevent UI crashes
   }
 };
 

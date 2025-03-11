@@ -28,8 +28,7 @@ export default function ExperienceTimeline() {
   return (
     <div className="relative">
       {/* Vertical timeline line */}
-      <div className="absolute left-0 md:left-1/2 h-full w-0.5 bg-orange-500/50 transform -translate-x-1/2"></div>
-
+      <div className="hidden sm:block absolute left-0 md:left-1/2 h-full w-0.5 bg-orange-500/50 transform -translate-x-1/2"></div>
       {experiences.map((exp, index) => (
         <motion.div
           key={index}

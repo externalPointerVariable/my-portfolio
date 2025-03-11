@@ -45,9 +45,9 @@ export default function Header() {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`block py-2 hover:text-blue-600 dark:hover:text-orange-500 transition-colors ${
+                className={`block py-2 hover:text-orange-500 dark:hover:text-orange-500 transition-colors ${
                   location.pathname === item.path
-                    ? 'text-blue-600 dark:text-orange-500'
+                    ? 'text-orange-500 dark:text-orange-500'
                     : 'text-gray-800 dark:text-white'
                 }`}
                 onClick={() => setIsMenuOpen(false)}

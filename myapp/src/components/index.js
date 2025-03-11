@@ -9,6 +9,8 @@ import ContactForm from './ContactForm';
 import ExperienceTimeline from './ExperienceTimeline';
 import EducationCertifications from './EducationCertification';
 import ProjectModal from './ProjectModal';
+import Github from './Github';
+import TechMarquee from './MarqueeRow';
 export {
     Container,
     Footer,
@@ -21,4 +23,6 @@ export {
     ExperienceTimeline,
     EducationCertifications,
     ProjectModal,
+    Github,
+    TechMarquee,
 }
