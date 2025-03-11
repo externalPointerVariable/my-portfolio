@@ -1,7 +1,13 @@
-import React from 'react';
-import { FaXTwitter, FaFacebook, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa6';
-import { Link } from 'react-router-dom';
-import { Container, Logo, NavItems } from '../index';
+import React from "react";
+import {
+  FaXTwitter,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import { Container, Logo, NavItems } from "../index";
 import { CiMail, CiPhone } from "react-icons/ci";
 
 export default function Footer() {
@@ -10,16 +16,14 @@ export default function Footer() {
       <Container className="mx-auto px-4 py-12">
         <div className="flex flex-col items-center space-y-8">
           <Link to="/" className="text-2xl font-bold text-orange-500">
-            <Logo  
-              className="w-full h-auto"
-            />
+            <Logo className="w-1/3 mx-auto -my-3 -mb-5" />
           </Link>
 
           <nav className="flex flex-wrap justify-center gap-8">
             {NavItems.map((item) => (
-              <Link 
-                key={item.name} 
-                to={item.path} 
+              <Link
+                key={item.name}
+                to={item.path}
                 className="text-white dark:text-gray-400 hover:text-orange-500 transition-colors"
               >
                 {item.name}
@@ -28,19 +32,39 @@ export default function Footer() {
           </nav>
 
           <div className="flex gap-4">
-            <Link to="https://x.com/__Abhi026063__" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
+            <Link
+              to="https://x.com/__Abhi026063__"
+              className="text-white dark:text-white hover:text-orange-500 transition-colors"
+              target="_blank"
+            >
               <FaXTwitter className="w-5 h-5" />
             </Link>
-            <Link to="https://www.facebook.com/profile.php?id=100081435431304" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
+            <Link
+              to="https://www.facebook.com/profile.php?id=100081435431304"
+              className="text-white dark:text-white hover:text-orange-500 transition-colors"
+              target="_blank"
+            >
               <FaFacebook className="w-5 h-5" />
             </Link>
-            <Link to="https://www.instagram.com/hello_abhi004/" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
+            <Link
+              to="https://www.instagram.com/hello_abhi004/"
+              className="text-white dark:text-white hover:text-orange-500 transition-colors"
+              target="_blank"
+            >
               <FaInstagram className="w-5 h-5" />
             </Link>
-            <Link to="https://www.linkedin.com/in/abhishek-thakur-289969218/" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
+            <Link
+              to="https://www.linkedin.com/in/abhishek-thakur-289969218/"
+              className="text-white dark:text-white hover:text-orange-500 transition-colors"
+              target="_blank"
+            >
               <FaLinkedin className="w-5 h-5" />
             </Link>
-            <Link to="https://github.com/externalPointerVariable" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
+            <Link
+              to="https://github.com/externalPointerVariable"
+              className="text-white dark:text-white hover:text-orange-500 transition-colors"
+              target="_blank"
+            >
               <FaGithub className="w-5 h-5" />
             </Link>
           </div>

@@ -2,6 +2,7 @@ import { FileDown } from "lucide-react";
 import { FaInstagram, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Resume from '../assets/resume/Abhishek_Thakur_resume.pdf';
+import Profile from '../assets/profile/images/profile.jpeg';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -82,8 +83,8 @@ export default function Home() {
 
           <motion.div className="flex gap-12 pt-8" variants={fadeInUp}>
             {[
-              { value: "5+", label: "Experiences" },
-              { value: "20+", label: "Projects Done" },
+              { value: "1+", label: "Experiences" },
+              { value: "7+", label: "Projects Done" },
             ].map(({ value, label }, index) => (
               <div key={index}>
                 <h3 className="text-3xl font-bold text-orange-500">{value}</h3>
@@ -109,7 +110,7 @@ export default function Home() {
             }}
           />
           <img
-            src="/placeholder.svg"
+            src={Profile}
             alt="Profile"
             width={600}
             height={600}

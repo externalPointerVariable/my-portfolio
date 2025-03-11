@@ -1,8 +1,9 @@
 import React from 'react';
+import logo from '../assets/profile/images/ProfileLogo.png';
 
 function Logo({ className }) {
   return (
-    <div className={className}>Logo</div>
+      <img src={logo} alt="Protfolio Logo" className={className}/>
   );
 }
 

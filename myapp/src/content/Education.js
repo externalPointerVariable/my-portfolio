@@ -1,26 +1,19 @@
 const educationCertifications = [
   {
     type: "Education",
-    title: "Bachelor of Science in Computer Science",
-    institution: "Tech University",
-    year: "2015 - 2019",
-    description: "Focused on UI/UX design and web development.",
+    title: "Bachelor of Science in Artificial Intelligence And Machine Leaning",
+    institution: "University School Of Automation And Robotics, Delhi",
+    year: "2022 - Present",
+    description:
+      "Focused on more in depth concept of artificila intelligence, machine learning and deep learning",
   },
   {
-    type: "Certification",
-    title: "Advanced UI/UX Design",
-    institution: "DesignPro Academy",
-    year: "2020",
+    type: "Education",
+    title: "Diploma In Computer Engineering",
+    institution: "Board Of Technical Education, Delhi",
+    year: "2019 - 2022",
     description:
-      "Mastered advanced techniques in user interface and experience design.",
-  },
-  {
-    type: "Certification",
-    title: "Full Stack Web Development",
-    institution: "CodeMaster Institute",
-    year: "2021",
-    description:
-      "Comprehensive training in modern web development technologies.",
+      "Learned and streangthened core concepts of computer science and engineering",
   },
 ];
 
