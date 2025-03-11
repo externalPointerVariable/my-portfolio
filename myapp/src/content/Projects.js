@@ -1,10 +1,11 @@
 const categories = [
   "All",
-  "Website Design",
-  "App Mobile Design",
-  "App Desktop",
-  "Braiding",
+  "Full Stack",
+  "Web Development",
+  "Backend Development",
+  "AI & Machine Learning",
 ];
+
 
 const projects = [
   {
