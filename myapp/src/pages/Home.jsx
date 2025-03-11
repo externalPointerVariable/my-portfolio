@@ -39,14 +39,17 @@ export default function Home() {
             {[
               {
                 href: "https://instagram.com",
+                target: "_blank",
                 icon: <FaInstagram className="w-5 h-5" />,
               },
               {
                 href: "https://linkedin.com",
+                target: "_blank",
                 icon: <FaLinkedin className="w-5 h-5" />,
               },
               {
                 href: "https://x.com",
+                target: "_blank",
                 icon: <FaXTwitter className="w-5 h-5" />,
               },
             ].map(({ href, icon }, index) => (
