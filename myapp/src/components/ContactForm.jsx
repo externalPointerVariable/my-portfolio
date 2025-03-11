@@ -29,7 +29,7 @@ export default function ContactForm() {
           type="text"
           placeholder="Your Name"
           required
-          className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-orange-500"
+          className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-900 border dark:border-gray-800 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-orange-500"
         />
       </div>
 
@@ -39,7 +39,7 @@ export default function ContactForm() {
           type="email"
           placeholder="Your Email"
           required
-          className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-orange-500"
+          className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-900 border dark:border-gray-800 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-orange-500"
         />
       </div>
 
@@ -48,7 +48,7 @@ export default function ContactForm() {
           id="message"
           placeholder="Your Message"
           required
-          className="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 min-h-[150px] focus:ring-2 focus:ring-orange-500"
+          className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-900 border dark:border-gray-800 rounded-lg text-white placeholder-gray-500 min-h-[150px] focus:ring-2 focus:ring-orange-500"
         />
       </div>
 

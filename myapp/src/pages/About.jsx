@@ -5,8 +5,15 @@ import {
   EducationCertifications,
   ExperienceTimeline,
 } from "../components/index";
+import{
+  GithubProfile
+} from '../hooks/index';
 
 export default function About() {
+  const [profilData, setProfileData] = useState("");
+  (async () => {
+    setProfileData(await GithubProfile());
+  })();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -14,7 +21,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="min-h-screen pt-16 pb-20 container mx-auto px-4 dark:bg-black">
+    <div className="min-h-screen pt-16 pb-20 container mx-auto px-4 dark:bg-black dark:text-white">
       <div className="py-8 md:py-20 flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div
           className={`relative w-full max-w-md aspect-[3/4] md:aspect-auto md:h-full transition-opacity transform ${
@@ -25,7 +32,7 @@ export default function About() {
         >
           <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-orange-500/20 to-transparent" />
           <img
-            src="/placeholder.svg"
+            src={profilData.avatar_url}
             alt="About"
             className="w-full h-full object-cover rounded-2xl"
           />
@@ -84,17 +91,20 @@ export default function About() {
         <EducationCertifications />
       </div>
 
-      <div
-        className={`py-8 md:py-20 transition-opacity transform ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        } duration-500 delay-800`}
-        id="contact"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
-          Contact Me
-        </h2>
-        <div className="max-w-md mx-auto">
-          <ContactForm />
+      <div className="flex items-center justify-center">
+        <div
+          className={`py-8 md:py-20 transition-opacity transform border-0.5 border-gray-500 w-1/2 rounded shadow-2xl 
+      ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      } duration-500 delay-800`}
+          id="contact"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
+            Contact Me
+          </h2>
+          <div className="max-w-md mx-auto">
+            <ContactForm />
+          </div>
         </div>
       </div>
     </div>

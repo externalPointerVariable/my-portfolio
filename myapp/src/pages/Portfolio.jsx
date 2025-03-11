@@ -44,9 +44,8 @@ export default function Portfolio() {
   );
 
   return (
-    <div className="min-h-screen pt-16 container mx-auto px-4">
+    <div className="min-h-screen pt-16 container mx-auto px-4 dark:bg-black">
       <div className="py-20 space-y-12">
-        {/* Title */}
         <motion.h1
           className={`text-5xl font-bold text-center bg-gradient-to-r from-gray-200 via-orange-500 to-orange-600 text-transparent bg-clip-text transition-all duration-300 ${
             isHovered ? 'drop-shadow-[0_0_10px_rgba(249,115,22,0.8)]' : ''
@@ -60,7 +59,6 @@ export default function Portfolio() {
           Portfolio
         </motion.h1>
 
-        {/* Categories */}
         <motion.div
           className="flex flex-wrap justify-center gap-4"
           initial={{ opacity: 0 }}
@@ -87,7 +85,6 @@ export default function Portfolio() {
           ))}
         </motion.div>
 
-        {/* Projects Grid */}
         <motion.div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial={{ opacity: 0 }}
@@ -106,14 +103,12 @@ export default function Portfolio() {
                 className="group relative w-full h-64 rounded-xl overflow-hidden cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
-                {/* Glow effect (behind the card) */}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"
                   initial={{ scale: 0.8 }}
                   whileHover={{ scale: 1.2 }}
                 />
 
-                {/* Card content */}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-600 p-1 rounded-xl z-10"
                   whileHover={{ scale: 1.05 }}
