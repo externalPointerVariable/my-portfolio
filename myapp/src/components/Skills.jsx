@@ -1,18 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { skills } from "../content/index";
 
-const skills = [
-  { name: "JavaScript", progress: 95 },
-  { name: "TypeScript", progress: 85 },
-  { name: "Python", progress: 90 },
-  { name: "Java", progress: 85 },
-  { name: "C++", progress: 80 },
-  { name: "C", progress: 75 },
-  { name: "SQL", progress: 85 },
-  { name: "PHP", progress: 70 },
-  { name: "Shell Scripting", progress: 65 },
-  { name: "Rust", progress: 60 },
-];
 
 export default function Skills() {
   const [ref, inView] = useInView({

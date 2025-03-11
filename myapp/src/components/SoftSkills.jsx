@@ -1,13 +1,5 @@
 import { motion } from "framer-motion";
-
-const softSkills = [
-  { name: "Communication", icon: "💬" },
-  { name: "Teamwork", icon: "🤝" },
-  { name: "Problem Solving", icon: "🧩" },
-  { name: "Adaptability", icon: "🔄" },
-  { name: "Creativity", icon: "🎨" },
-  { name: "Time Management", icon: "⏳" },
-];
+import { softSkills } from "../content/index";
 
 export default function SoftSkills() {
   return (
