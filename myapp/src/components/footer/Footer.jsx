@@ -28,19 +28,19 @@ export default function Footer() {
           </nav>
 
           <div className="flex gap-4">
-            <Link to="#" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
+            <Link to="https://x.com/__Abhi026063__" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
               <FaXTwitter className="w-5 h-5" />
             </Link>
-            <Link to="#" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
+            <Link to="https://www.facebook.com/profile.php?id=100081435431304" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
               <FaFacebook className="w-5 h-5" />
             </Link>
-            <Link to="#" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
+            <Link to="https://www.instagram.com/hello_abhi004/" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
               <FaInstagram className="w-5 h-5" />
             </Link>
-            <Link to="#" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
+            <Link to="https://www.linkedin.com/in/abhishek-thakur-289969218/" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
               <FaLinkedin className="w-5 h-5" />
             </Link>
-            <Link to="#" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
+            <Link to="https://github.com/externalPointerVariable" className="text-white dark:text-white hover:text-orange-500 transition-colors" target='_blank'>
               <FaGithub className="w-5 h-5" />
             </Link>
           </div>

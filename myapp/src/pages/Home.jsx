@@ -1,6 +1,7 @@
 import { FileDown } from "lucide-react";
 import { FaInstagram, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import Resume from '../assets/resume/Abhishek_Thakur_resume.pdf';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -38,17 +39,17 @@ export default function Home() {
           <motion.div className="flex gap-4" variants={fadeInUp}>
             {[
               {
-                href: "https://instagram.com",
+                href: "https://www.instagram.com/hello_abhi004/",
                 target: "_blank",
                 icon: <FaInstagram className="w-5 h-5" />,
               },
               {
-                href: "https://linkedin.com",
+                href: "https://www.linkedin.com/in/abhishek-thakur-289969218/",
                 target: "_blank",
                 icon: <FaLinkedin className="w-5 h-5" />,
               },
               {
-                href: "https://x.com",
+                href: "https://x.com/__Abhi026063__",
                 target: "_blank",
                 icon: <FaXTwitter className="w-5 h-5" />,
               },
@@ -67,12 +68,16 @@ export default function Home() {
 
           <motion.div className="flex gap-4" variants={fadeInUp}>
             <button className="px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md">
-              Hire Me
+              <a href="mailto:AbhishekThakur004@outlook.com">Hire Me</a>
             </button>
-            <button className="px-6 py-2 border border-gray-300 flex items-center gap-2 rounded-md hover:bg-gray-100 transition dark:border-gray-700 dark:text-white dark:hover:bg-gray-700/50">
+            <a
+              href={Resume}
+              download="Abhishek_Resume.pdf"
+              className="px-6 py-2 border border-gray-300 flex items-center gap-2 rounded-md hover:bg-gray-100 transition dark:border-gray-700 dark:text-white dark:hover:bg-gray-700/50"
+            >
               <FileDown className="w-4 h-4" />
               Download CV
-            </button>
+            </a>
           </motion.div>
 
           <motion.div className="flex gap-12 pt-8" variants={fadeInUp}>

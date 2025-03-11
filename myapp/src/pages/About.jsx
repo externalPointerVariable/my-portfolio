@@ -5,9 +5,8 @@ import {
   EducationCertifications,
   ExperienceTimeline,
 } from "../components/index";
-import{
-  GithubProfile
-} from '../hooks/index';
+import { GithubProfile } from "../hooks/index";
+import Resume from "../assets/resume/Abhishek_Thakur_resume.pdf";
 
 export default function About() {
   const [profilData, setProfileData] = useState("");
@@ -46,22 +45,29 @@ export default function About() {
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold">About Me</h1>
             <h2 className="text-xl dark:text-gray-400 text-gray-700">
-            Software Engineer | Frontend & Backend Developer
+              Software Engineer | Frontend & Backend Developer
             </h2>
           </div>
 
           <p className="dark:text-gray-300 text-gray-500 leading-relaxed">
-          Passionate about crafting intuitive user experiences and scalable backend solutions. I specialize in full-stack development, bringing together modern frameworks and best practices to create seamless applications.
+            Passionate about crafting intuitive user experiences and scalable
+            backend solutions. I specialize in full-stack development, bringing
+            together modern frameworks and best practices to create seamless
+            applications.
           </p>
 
           <p className="dark:text-gray-300 text-gray-500 leading-relaxed">
-          With experience in frontend and backend technologies, I love solving complex problems, optimizing performance, and continuously learning new technologies to stay ahead in the evolving tech landscape.
+            With experience in frontend and backend technologies, I love solving
+            complex problems, optimizing performance, and continuously learning
+            new technologies to stay ahead in the evolving tech landscape.
           </p>
 
-          <button className="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white dark:text-white rounded-lg hover:bg-orange-600 transition">
-            <FileDown className="w-4 h-4" />
-            Download CV
-          </button>
+          <a href={Resume} download="Abhishek_Resume.pdf">
+            <button className="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white dark:text-white rounded-lg hover:bg-orange-600 transition">
+              <FileDown className="w-4 h-4" />
+              Download CV
+            </button>
+          </a>
         </div>
       </div>
 
