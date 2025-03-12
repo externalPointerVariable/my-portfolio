@@ -1,8 +1,8 @@
 const config = {
-    personalAccessToken: String(import.meta.env.VITE_GITHUB_TOKEN),
-    emailjsServiceId: String(import.meta.env.VITE_EMAIL_SERVICE_ID),
-    emailjsTemplateId: String(import.meta.env.VITE_EMAIL_TEMPLATE_ID),
-    emailjsPublicKey: String(import.meta.env.VITE_EMAIL_PUBLIC_KEY),
+    personalAccessToken: import.meta.env.VITE_GITHUB_TOKEN,
+    emailjsServiceId: import.meta.env.VITE_EMAIL_SERVICE_ID,
+    emailjsTemplateId: import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+    emailjsPublicKey: import.meta.env.VITE_EMAIL_PUBLIC_KEY,
 }
 console.log(config);
 
