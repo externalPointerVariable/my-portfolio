@@ -125,22 +125,23 @@ const techStack = [
 const MarqueeRow = ({ items, direction }) => {
   return (
     <div className="relative overflow-hidden whitespace-nowrap sm:block">
-      <div className="flex gap-6 py-2 animate-marquee-wrapper">
-        <div
-          className={`flex gap-6 py-2 animate-marquee ${
-            direction === "reverse" ? "animate-marquee-reverse" : ""
-          }`}
-        >
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className="flex items-center space-x-2 text-lg font-semibold border dark:border-gray-600 dark:bg-gray-900 bg-gray-100 rounded-2xl px-4 py-2 shadow-md"
-            >
-              {item.icon}
-              <span className="dark:text-white text-black">{item.name}</span>
-            </div>
-          ))}
-        </div>
+      <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-white dark:from-black via-transparent to-transparent z-10"></div>
+      <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-white dark:from-black via-transparent to-transparent z-10"></div>
+
+      <div
+        className={`flex gap-6 py-2 animate-marquee ${
+          direction === "reverse" ? "animate-marquee-reverse" : ""
+        }`}
+      >
+        {[...items, ...items].map((item, index) => (
+          <div
+            key={index}
+            className="flex items-center space-x-2 text-lg font-semibold border dark:border-gray-600 dark:bg-gray-900 bg-gray-100 rounded-2xl px-4 py-2 shadow-md"
+          >
+            {item.icon}
+            <span className="dark:text-white text-black">{item.name}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -148,7 +149,7 @@ const MarqueeRow = ({ items, direction }) => {
 
 export default function TechMarquee() {
   return (
-    <div className="hidden sm:block text-white p-6 space-y-2 relative w-1/2 mx-auto dark:text-gray-600">
+    <div className="hidden sm:block text-white p-6 space-y-2 relative dark:text-gray-600">
       {techStack.map((stack, index) => (
         <MarqueeRow
           key={index}
