@@ -28,7 +28,7 @@ export default function ExperienceTimeline() {
           </div>
 
           <motion.div
-            className={`relative bg-gray-900 p-4 rounded-lg shadow-lg w-full md:w-5/12 ${
+            className={`relative bg-gray-800 dark:bg-gray-900 p-4 rounded-lg shadow-lg w-full md:w-5/12 ${
               index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"
             }`}
             initial={{ opacity: 0, scale: 0.9 }}

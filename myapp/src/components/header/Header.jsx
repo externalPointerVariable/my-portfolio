@@ -17,12 +17,16 @@ export default function Header() {
             className="flex items-center gap-2 text-xl font-bold text-orange-600 dark:text-orange-500"
           >
             <Logo className="w-8 h-8" />
-            <span>Abhi🧑‍💻Works</span>
+            <span>Abhi<span>
+            <img
+            src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Man%20Technologist.png"
+            alt="Man Technologist"
+            width="20"
+            height="20"
+            className="inline-block"
+          /></span>Works</span>
           </Link>
 
-          <div className="flex justify-center items-center pr-2">
-            <ThemeBtn />
-          </div>
           <div className="hidden md:flex items-center space-x-6">
             {NavItems.map((item) => (
               <Link
@@ -39,25 +43,27 @@ export default function Header() {
             ))}
           </div>
 
+          <ThemeBtn />
+
           <button
-            className="md:hidden"
+            className="md:hidden flex items-center p-2 transition-all duration-300 ease-in-out transform hover:scale-110 active:scale-95"
             onClick={() => setIsMenuOpen((prev) => !prev)}
           >
             {isMenuOpen ? (
-              <X className="text-black dark:text-white" />
+              <X className="text-black dark:text-white h-6 w-6 transition-all duration-300 rotate-180 opacity-80" />
             ) : (
-              <Menu className="text-black dark:text-white" />
+              <Menu className="text-black dark:text-white h-6 w-6 transition-all duration-300 rotate-0 opacity-100" />
             )}
           </button>
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden py-4">
+          <div className="md:hidden absolute top-16 left-0 w-full bg-white dark:bg-black shadow-lg border-t border-gray-200 dark:border-gray-700 transition-all duration-300">
             {NavItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`block py-2 hover:text-orange-500 dark:hover:text-orange-500 transition-colors ${
+                className={`block py-3 px-6 hover:text-orange-500 dark:hover:text-orange-500 transition-colors ${
                   location.pathname === item.path
                     ? "text-orange-500 dark:text-orange-500"
                     : "text-gray-800 dark:text-white"

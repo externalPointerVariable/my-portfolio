@@ -14,7 +14,7 @@ export default function EducationCertifications() {
       {educationCertifications.map((item, index) => (
         <motion.div
           key={index}
-          className={`bg-gray-900 p-6 rounded-lg shadow-lg transition-opacity transform ${
+          className={`bg-gray-800 dark:bg-gray-900 p-6 rounded-lg shadow-lg transition-opacity transform ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           } duration-500`}
           initial={{ opacity: 0, y: 50 }}

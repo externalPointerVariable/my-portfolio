@@ -9,6 +9,18 @@ const fadeInUp = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
+// Separate Mobile Profile Component
+const MobileProfile = () => (
+  <motion.div
+    className="w-40 h-40 mx-auto md:hidden rounded-full overflow-hidden border-4 border-orange-500"
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5, delay: 0.2 }}
+  >
+    <img src={Profile} alt="Profile" className="w-full h-full object-cover" />
+  </motion.div>
+);
+
 export default function Home() {
   return (
     <div className="min-h-screen pt-16 container mx-auto px-4 dark:bg-black min-w-full">
@@ -22,11 +34,11 @@ export default function Home() {
             animate: { opacity: 1, transition: { staggerChildren: 0.1 } },
           }}
         >
+          {/* Mobile Profile Image */}
+          <MobileProfile />
+
           <div className="space-y-2">
-            <motion.h2
-              className="text-2xl text-gray-800 font-mono dark:text-gray-400"
-              variants={fadeInUp}
-            >
+            <motion.h2 className="text-2xl text-gray-800 font-mono dark:text-gray-400" variants={fadeInUp}>
               Hi, I am
             </motion.h2>
             <motion.h1
@@ -94,8 +106,9 @@ export default function Home() {
           </motion.div>
         </motion.div>
 
+        {/* Desktop Profile Image */}
         <motion.div
-          className="flex-1 relative aspect-square hidden sm:block" // 👈 Hide on small screens
+          className="flex-1 relative aspect-square hidden sm:block"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -109,13 +122,7 @@ export default function Home() {
               repeatType: "reverse",
             }}
           />
-          <img
-            src={Profile}
-            alt="Profile"
-            width={600}
-            height={600}
-            className="rounded-full"
-          />
+          <img src={Profile} alt="Profile" width={600} height={600} className="rounded-full" />
         </motion.div>
       </div>
     </div>
