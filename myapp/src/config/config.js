@@ -9,6 +9,5 @@ const config = {
   emailjsPublicKey: cleanEnvVar(import.meta.env.VITE_EMAIL_PUBLIC_KEY || ""),
 };
 
-console.log(config); // Debugging
 
 export default config;
