@@ -4,5 +4,6 @@ const config = {
     emailjsTemplateId: String(import.meta.env.VITE_EMAIL_TEMPLATE_ID),
     emailjsPublicKey: String(import.meta.env.VITE_EMAIL_PUBLIC_KEY),
 }
+console.log(config);
 
 export default config;
