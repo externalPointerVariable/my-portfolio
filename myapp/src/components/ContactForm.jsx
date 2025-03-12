@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import config from "../config/config";
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -8,12 +10,28 @@ export default function ContactForm() {
     event.preventDefault();
     setIsLoading(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    const formData = {
+      to_name: "Abhishek Thakur",
+      from_name: event.target.name.value,
+      message: event.target.message.value,
+      reply_to: event.target.email.value,
+    };
+
+    try {
+      await emailjs.send(
+        config.emailjsServiceId,
+        config.emailjsTemplateId,
+        formData,
+        config.emailjsPublicKey
+      );
+
+      setMessageSent(true);
+      setTimeout(() => setMessageSent(false), 3000);
+    } catch (error) {
+      alert("Failed to send message. Please try again.");
+    }
 
     setIsLoading(false);
-    setMessageSent(true);
-
-    setTimeout(() => setMessageSent(false), 3000);
   }
 
   return (
@@ -26,7 +44,7 @@ export default function ContactForm() {
 
       <div>
         <input
-          id="name"
+          name="name"
           type="text"
           placeholder="Your Name"
           required
@@ -36,7 +54,7 @@ export default function ContactForm() {
 
       <div>
         <input
-          id="email"
+          name="email"
           type="email"
           placeholder="Your Email"
           required
@@ -46,7 +64,7 @@ export default function ContactForm() {
 
       <div>
         <textarea
-          id="message"
+          name="message"
           placeholder="Your Message"
           required
           className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-900 border dark:border-gray-800 rounded-lg text-black dark:text-white placeholder-gray-500 min-h-[150px] focus:ring-2 focus:ring-orange-500 focus:outline-none"
