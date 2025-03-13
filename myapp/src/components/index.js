@@ -11,6 +11,7 @@ import EducationCertifications from './EducationCertification';
 import ProjectModal from './ProjectModal';
 import Github from './Github';
 import TechMarquee from './MarqueeRow';
+import Particle from './Particle';
 export {
     Container,
     Footer,
@@ -25,4 +26,5 @@ export {
     ProjectModal,
     Github,
     TechMarquee,
+    Particle
 }
