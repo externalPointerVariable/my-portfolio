@@ -12,6 +12,7 @@ import MlbquizBanner from '../assets/project/banner/MlbquizBanner.png';
 
 const categories = [
   "All",
+  "Blog",
   "Full Stack Development",
   "Frontend Development",
   "Backend Development",

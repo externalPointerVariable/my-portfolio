@@ -13,7 +13,7 @@ export default function Portfolio() {
   );
 
   return (
-    <div className="min-h-screen pt-16 container mx-auto px-4 dark:bg-black min-w-full">
+    <div className="min-h-screen pt-16 pb-20 container mx-auto px-6 md:px-16 lg:px-24 xl:px-32 dark:bg-black">
       <div className="py-20 space-y-12">
         {/* Portfolio Title */}
         <motion.h1

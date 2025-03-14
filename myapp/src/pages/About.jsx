@@ -22,9 +22,8 @@ export default function About() {
   }, []);
 
   return (
-    <div className="min-h-screen pt-16 pb-20 container mx-auto px-4 dark:bg-black dark:text-white min-w-full">
+    <div className="min-h-screen pt-16 pb-20 container mx-auto px-6 md:px-16 lg:px-24 xl:px-32 dark:bg-black dark:text-white">
       <div className="py-8 md:py-20 flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-        {/* Profile Image Section */}
         {profileData && (
           <div
             className={`relative w-full max-w-md aspect-[3/4] md:aspect-auto md:h-full transition-opacity transform ${
@@ -42,7 +41,6 @@ export default function About() {
           </div>
         )}
 
-        {/* About Me Text Section */}
         <div
           className={`space-y-6 md:space-y-8 transition-opacity transform ${
             isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
@@ -85,7 +83,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* Experience Section */}
       <div
         className={`py-16 md:py-24 transition-opacity transform ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -103,7 +100,6 @@ export default function About() {
         <ExperienceTimeline />
       </div>
 
-      {/* Education & Certifications Section */}
       <div
         className={`py-16 md:py-24 transition-opacity transform ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -121,8 +117,7 @@ export default function About() {
         <EducationCertifications />
       </div>
 
-      {/* Contact Me Section */}
-      <div className="flex items-center justify-center min-h-screen px-4">
+      <div className="flex items-center justify-center min-h-screen px-6 md:px-16 lg:px-24 xl:px-32">
         <div
           className={`w-full max-w-lg md:max-w-xl lg:max-w-2xl py-8 md:py-16 px-6 md:px-10 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-2xl transition-all transform ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"

@@ -24,119 +24,136 @@ const MobileProfile = () => (
 
 export default function Home() {
   return (
-    <div className="min-h-screen pt-16 container mx-auto px-4 dark:bg-black min-w-full">
+    <div className="min-h-screen pt-16 dark:bg-black">
       <Particle>
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-12 py-20">
-          <motion.div
-            className="flex-1 space-y-8"
-            initial="initial"
-            animate="animate"
-            variants={{
-              initial: { opacity: 0 },
-              animate: { opacity: 1, transition: { staggerChildren: 0.1 } },
-            }}
-          >
-            {/* Mobile Profile Image */}
-            <MobileProfile />
-
-            <div className="space-y-2">
-              <motion.h2
-                className="text-2xl text-gray-800 font-mono dark:text-gray-400"
-                variants={fadeInUp}
-              >
-                Hi, I am
-              </motion.h2>
-              <motion.h1
-                className="text-5xl font-bold bg-gradient-to-r from-gray-800 via-orange-500 to-orange-600 text-transparent bg-clip-text pb-4"
-                variants={fadeInUp}
-              >
-                Software Developer
-              </motion.h1>
-            </div>
-
-            <motion.div className="flex gap-4" variants={fadeInUp}>
-              {[
-                {
-                  href: "https://www.instagram.com/hello_abhi004/",
-                  target: "_blank",
-                  icon: <FaInstagram className="w-5 h-5" />,
-                },
-                {
-                  href: "https://www.linkedin.com/in/abhishek-thakur-289969218/",
-                  target: "_blank",
-                  icon: <FaLinkedin className="w-5 h-5" />,
-                },
-                {
-                  href: "https://x.com/__Abhi026063__",
-                  target: "_blank",
-                  icon: <FaXTwitter className="w-5 h-5" />,
-                },
-              ].map(({ href, icon }, index) => (
-                <a
-                  key={index}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full border border-none hover:bg-gray-100 transition dark:text-white dark:hover:bg-gray-700/50"
-                >
-                  {icon}
-                </a>
-              ))}
-            </motion.div>
-
-            <motion.div className="flex gap-4" variants={fadeInUp}>
-              <button className="px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md">
-                <a href="mailto:AbhishekThakur004@outlook.com">Hire Me</a>
-              </button>
-              <a
-                href={Resume}
-                download="Abhishek_Resume.pdf"
-                className="px-6 py-2 border border-gray-300 flex items-center gap-2 rounded-md hover:bg-gray-100 transition dark:border-gray-700 dark:text-white dark:hover:bg-gray-700/50"
-              >
-                <FileDown className="w-4 h-4" />
-                Download CV
-              </a>
-            </motion.div>
-
-            <motion.div className="flex gap-12 pt-8" variants={fadeInUp}>
-              {[
-                { value: "1+", label: "Experiences" },
-                { value: "7+", label: "Projects Done" },
-              ].map(({ value, label }, index) => (
-                <div key={index}>
-                  <h3 className="text-3xl font-bold text-orange-500">
-                    {value}
-                  </h3>
-                  <p className="text-gray-400">{label}</p>
-                </div>
-              ))}
-            </motion.div>
-          </motion.div>
-
-          {/* Desktop Profile Image */}
-          <motion.div
-            className="flex-1 relative aspect-square hidden sm:block"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+        <div className="max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-16 py-20">
+          <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8">
             <motion.div
-              className="absolute inset-0 rounded-full bg-gradient-to-br from-orange-500/20 to-transparent"
-              animate={{ scale: [1, 1.01, 1], opacity: [0.5, 0.8, 0.5] }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                repeatType: "reverse",
+              className="flex-1 space-y-8"
+              initial="initial"
+              animate="animate"
+              variants={{
+                initial: { opacity: 0 },
+                animate: { opacity: 1, transition: { staggerChildren: 0.1 } },
               }}
-            />
-            <img
-              src={Profile}
-              alt="Profile"
-              width={600}
-              height={600}
-              className="rounded-full"
-            />
-          </motion.div>
+            >
+              {/* Mobile Profile Image */}
+              <MobileProfile />
+
+              <div className="space-y-2">
+                <motion.h2
+                  className="text-xl md:text-2xl font-mono text-gray-700 dark:text-gray-400 tracking-wide"
+                  variants={fadeInUp}
+                >
+                  Hi, I am
+                </motion.h2>
+                <motion.h1
+                  className="text-5xl font-bold bg-gradient-to-r from-gray-800 via-orange-500 to-orange-600 text-transparent bg-clip-text pb-4"
+                  variants={fadeInUp}
+                >
+                  Software Developer
+                </motion.h1>
+                <motion.p
+                  className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg"
+                  variants={fadeInUp}
+                >
+                  Passionate about crafting efficient, scalable, and
+                  user-friendly applications.
+                </motion.p>
+              </div>
+
+              <motion.div className="flex gap-4" variants={fadeInUp}>
+                {[
+                  {
+                    href: "https://www.instagram.com/hello_abhi004/",
+                    target: "_blank",
+                    icon: <FaInstagram className="w-5 h-5" />,
+                  },
+                  {
+                    href: "https://www.linkedin.com/in/abhishek-thakur-289969218/",
+                    target: "_blank",
+                    icon: <FaLinkedin className="w-5 h-5" />,
+                  },
+                  {
+                    href: "https://x.com/__Abhi026063__",
+                    target: "_blank",
+                    icon: <FaXTwitter className="w-5 h-5" />,
+                  },
+                ].map(({ href, icon }, index) => (
+                  <a
+                    key={index}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full border border-none hover:bg-gray-100 transition dark:text-white dark:hover:bg-gray-700/50"
+                  >
+                    {icon}
+                  </a>
+                ))}
+              </motion.div>
+
+              <motion.div className="flex gap-4" variants={fadeInUp}>
+                <button className="px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md">
+                  <a href="mailto:AbhishekThakur004@outlook.com">Hire Me</a>
+                </button>
+                <a
+                  href={Resume}
+                  download="Abhishek_Resume.pdf"
+                  className="px-6 py-2 border border-gray-300 flex items-center gap-2 rounded-md hover:bg-gray-100 transition dark:border-gray-700 dark:text-white dark:hover:bg-gray-700/50"
+                >
+                  <FileDown className="w-4 h-4" />
+                  Download CV
+                </a>
+              </motion.div>
+
+              <motion.div className="flex gap-12 pt-8" variants={fadeInUp}>
+                {[
+                  { value: "1+", label: "Experiences" },
+                  { value: "7+", label: "Projects Done" },
+                ].map(({ value, label }, index) => (
+                  <div key={index}>
+                    <h3 className="text-3xl font-bold text-orange-500">
+                      {value}
+                    </h3>
+                    <p className="text-gray-400">{label}</p>
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+
+            {/* Profile Image with Enhanced Effect */}
+            <motion.div
+              className="flex-1 relative aspect-square hidden sm:block"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              {/* Pulsating Glow Effect */}
+              <motion.div
+                className="absolute inset-0 rounded-full bg-gradient-to-br from-orange-500/30 to-transparent animate-pulse"
+                animate={{ scale: [1, 1.05, 1], opacity: [0.4, 0.7, 0.4] }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
+              />
+
+              {/* Rotating Ring Effect */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-[110%] h-[110%] rounded-full border-[3px] border-orange-500 opacity-30 animate-spin-slow"></div>
+              </div>
+
+              {/* Profile Image */}
+              <img
+                src={Profile}
+                alt="Profile"
+                width={600}
+                height={600}
+                className="rounded-full shadow-xl"
+              />
+            </motion.div>
+          </div>
         </div>
       </Particle>
     </div>
