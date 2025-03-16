@@ -1,14 +1,17 @@
-import Lawverse from '../assets/project/images/Lawverse.png';
-import LawverseBanner from '../assets/project/banner/LawverseBanner.png';
+import Lawverse from "../assets/project/images/Lawverse.png";
+import LawverseBanner from "../assets/project/banner/LawverseBanner.png";
 
-import Buildbook from '../assets/project/images/Buildbook.png';
-import BuildbookBanner from '../assets/project/banner/BuildbookBanner.png';
+import Buildbook from "../assets/project/images/Buildbook.png";
+import BuildbookBanner from "../assets/project/banner/BuildbookBanner.png";
 
-import Mundane from '../assets/project/images/Mundane.png';
-import MundaneBanner from '../assets/project/banner/MundaneBanner.png';
+import Mundane from "../assets/project/images/Mundane.png";
+import MundaneBanner from "../assets/project/banner/MundaneBanner.png";
 
-import Mlbquiz from '../assets/project/images/Mlbquiz.jpg';
-import MlbquizBanner from '../assets/project/banner/MlbquizBanner.png';
+import Mlbquiz from "../assets/project/images/Mlbquiz.jpg";
+import MlbquizBanner from "../assets/project/banner/MlbquizBanner.png";
+
+import Speedy from '../assets/project/images/Speedy.webp';
+import SpeedyBanner from '../assets/project/banner/SpeedyBanner.webp';
 
 const categories = [
   "All",
@@ -37,7 +40,8 @@ const projects = [
     category: "Frontend Development",
     image: Buildbook,
     banner: BuildbookBanner,
-    description: "A ReactJs based project that showcases a list of standard projects ⚛️",
+    description:
+      "A ReactJs based project that showcases a list of standard projects ⚛️",
     techStack: ["React.js", "Tailwind CSS", "Javascript"],
     type: "Personal",
     githubLink: "https://github.com/externalPointerVariable/BuildBook",
@@ -48,7 +52,8 @@ const projects = [
     category: "Frontend Development",
     image: Mundane,
     banner: MundaneBanner,
-    description: "This repository is a collection of some basic JavaScript projects that provides basic functionalities to the user",
+    description:
+      "This repository is a collection of some basic JavaScript projects that provides basic functionalities to the user",
     techStack: ["Nodek.js", "Bootstrap", "Javascript"],
     type: "Personal",
     githubLink: "https://github.com/externalPointerVariable/Mundane.io",
@@ -59,11 +64,30 @@ const projects = [
     category: "Full Stack Development",
     image: Mlbquiz,
     banner: MlbquizBanner,
-    description: "MLP Quiz ia a web applicatrion dedicated to all the baseball fans. Who wants to test their valor int the field of baseball surrounding knowledge 🤯.",
-    techStack: ["React.js", "Python", "Javascript", "Django Rest Framework", "GCP"],
+    description:
+      "MLP Quiz ia a web applicatrion dedicated to all the baseball fans. Who wants to test their valor int the field of baseball surrounding knowledge 🤯.",
+    techStack: [
+      "React.js",
+      "Python",
+      "Javascript",
+      "Django Rest Framework",
+      "GCP",
+    ],
     type: "Collaboration",
     githubLink: "https://github.com/externalPointerVariable/Mundane.io",
     liveLink: "https://mlb-frontend-nine.vercel.app/",
+  },
+  {
+    name: "Speedy",
+    category: "Backend Development",
+    image: Speedy,
+    banner: SpeedyBanner,
+    description:
+      "Speedy is a Discord bot designed to track and analyze users' typing speed in real-time. Mention the bot, and it will calculate your Words Per Minute (WPM) and display the results instantly! ⚡⌨️. Visit the github repository for more information",
+    techStack: ["Node.js", "Discord.js", "Express", "JavaScript", "Render"],
+    type: "Personal Project",
+    githubLink: "https://github.com/externalPointerVariable/DiscordWPMBot",
+    liveLink: "https://discord.gg/Rt28h4Hb",
   },
 ];
 
