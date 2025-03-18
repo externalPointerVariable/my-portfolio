@@ -103,16 +103,27 @@ export default function Home() {
                 </a>
               </motion.div>
 
-              <motion.div className="flex gap-12 pt-8" variants={fadeInUp}>
+              <motion.div
+                className="flex items-center justify-center gap-8 px-10 py-4 rounded-xl bg-gray-100 dark:bg-gray-800"
+                variants={fadeInUp}
+              >
                 {[
                   { value: "1+", label: "Experiences" },
                   { value: "7+", label: "Projects Done" },
-                ].map(({ value, label }, index) => (
-                  <div key={index}>
-                    <h3 className="text-3xl font-bold text-orange-500">
-                      {value}
-                    </h3>
-                    <p className="text-gray-400">{label}</p>
+                ].map(({ value, label }, index, array) => (
+                  <div key={index} className="flex items-center gap-6">
+                    <div className="text-center min-w-[100px]">
+                      <h3 className="text-2xl md:text-3xl font-bold text-orange-500">
+                        {value}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">
+                        {label}
+                      </p>
+                    </div>
+
+                    {index < array.length - 1 && (
+                      <div className="h-10 w-px bg-gray-400 dark:bg-gray-500"></div>
+                    )}
                   </div>
                 ))}
               </motion.div>
