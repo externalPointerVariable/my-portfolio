@@ -10,7 +10,7 @@ const fadeInUp = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-// Separate Mobile Profile Component
+// Separate Mobile Profile Component (Optional Animation)
 const MobileProfile = () => (
   <motion.div
     className="w-40 h-40 mx-auto md:hidden rounded-full overflow-hidden border-4 border-orange-500"
@@ -66,17 +66,14 @@ export default function Home() {
                 {[
                   {
                     href: "https://www.instagram.com/hello_abhi004/",
-                    target: "_blank",
                     icon: <FaInstagram className="w-5 h-5" />,
                   },
                   {
                     href: "https://www.linkedin.com/in/abhishek-thakur-289969218/",
-                    target: "_blank",
                     icon: <FaLinkedin className="w-5 h-5" />,
                   },
                   {
                     href: "https://x.com/__Abhi026063__",
-                    target: "_blank",
                     icon: <FaXTwitter className="w-5 h-5" />,
                   },
                 ].map(({ href, icon }, index) => (
@@ -85,7 +82,7 @@ export default function Home() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-full border border-none hover:bg-gray-100 transition dark:text-white dark:hover:bg-gray-700/50"
+                    className="p-2 rounded-full border-none hover:bg-gray-100 transition dark:text-white dark:hover:bg-gray-700/50"
                   >
                     {icon}
                   </a>
@@ -121,29 +118,8 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            {/* Profile Image with Enhanced Effect */}
-            <motion.div
-              className="flex-1 relative aspect-square hidden sm:block"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              {/* Pulsating Glow Effect */}
-              <motion.div
-                className="absolute inset-0 rounded-full bg-gradient-to-br from-orange-500/30 to-transparent animate-pulse"
-                animate={{ scale: [1, 1.05, 1], opacity: [0.4, 0.7, 0.4] }}
-                transition={{
-                  duration: 2.5,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
-              />
-
-              {/* Rotating Ring Effect */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[110%] h-[110%] rounded-full border-[3px] border-orange-500 opacity-30 animate-spin-slow"></div>
-              </div>
-
+            {/* Profile Image Without Animation */}
+            <div className="flex-1 relative aspect-square hidden sm:block">
               {/* Profile Image */}
               <img
                 src={Profile}
@@ -152,7 +128,7 @@ export default function Home() {
                 height={600}
                 className="rounded-full shadow-xl"
               />
-            </motion.div>
+            </div>
           </div>
         </div>
       </Particle>
