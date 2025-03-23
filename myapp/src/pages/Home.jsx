@@ -37,32 +37,24 @@ export default function Home() {
                 animate: { opacity: 1, transition: { staggerChildren: 0.1 } },
               }}
             >
-              {/* Mobile Profile Image */}
               <MobileProfile />
 
               <div className="space-y-2">
                 <motion.h2
-                  className="text-xl md:text-2xl font-mono text-gray-700 dark:text-gray-400 tracking-wide"
+                  className="text-xl md:text-2xl font-mono text-gray-700 dark:text-gray-400 tracking-wide relative z-10"
                   variants={fadeInUp}
                 >
                   Hi, I am
                 </motion.h2>
                 <motion.h1
-                  className="text-5xl font-bold bg-gradient-to-r from-gray-800 via-orange-500 to-orange-600 text-transparent bg-clip-text pb-4"
+                  className="text-5xl font-bold bg-gradient-to-r from-gray-800 via-orange-500 to-orange-600 text-transparent bg-clip-text pb-4 relative z-10"
                   variants={fadeInUp}
                 >
                   Software Developer
                 </motion.h1>
-                <motion.p
-                  className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg"
-                  variants={fadeInUp}
-                >
-                  Passionate about crafting efficient, scalable, and
-                  user-friendly applications.
-                </motion.p>
               </div>
 
-              <motion.div className="flex gap-4" variants={fadeInUp}>
+              <motion.div className="flex gap-4 relative z-10" variants={fadeInUp}>
                 {[
                   {
                     href: "https://www.instagram.com/hello_abhi004/",
@@ -89,7 +81,7 @@ export default function Home() {
                 ))}
               </motion.div>
 
-              <motion.div className="flex gap-4" variants={fadeInUp}>
+              <motion.div className="flex gap-4 relative z-10" variants={fadeInUp}>
                 <button className="px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md">
                   <a href="mailto:AbhishekThakur004@outlook.com">Hire Me</a>
                 </button>
@@ -104,7 +96,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div
-                className="flex items-center justify-center gap-8 px-10 py-4 rounded-xl bg-gray-100 dark:bg-gray-800"
+                className="flex items-center justify-center gap-8 px-10 py-4 rounded-xl bg-gray-100 dark:bg-gray-800 relative z-10"
                 variants={fadeInUp}
               >
                 {[
@@ -128,10 +120,7 @@ export default function Home() {
                 ))}
               </motion.div>
             </motion.div>
-
-            {/* Profile Image Without Animation */}
-            <div className="flex-1 relative aspect-square hidden sm:block">
-              {/* Profile Image */}
+            <div className="flex-1 relative aspect-square hidden sm:block z-10">
               <img
                 src={Profile}
                 alt="Profile"

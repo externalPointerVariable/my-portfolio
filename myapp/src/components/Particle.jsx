@@ -94,7 +94,7 @@ const Particle = ({ children }) => {
       <Particles
         id="tsparticles"
         options={options}
-        className="absolute inset-0 -z-1"
+        className="absolute inset-0 z-0"
       />
       {children}
     </div>
