@@ -3,7 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { Home, Portfolio, About, Skills, Uses } from "./pages/index.js";
+import { Home, Portfolio, About, Skills, Uses , Error} from "./pages/index.js";
 import { Provider } from "react-redux";
 import store from "./store/store.js";
 
@@ -11,6 +11,7 @@ const rooutes = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
