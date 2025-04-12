@@ -54,7 +54,7 @@ const projects = [
     banner: MundaneBanner,
     description:
       "This repository is a collection of some basic JavaScript projects that provides basic functionalities to the user",
-    techStack: ["Nodek.js", "Bootstrap", "Javascript"],
+    techStack: ["Node.js", "Bootstrap", "Javascript"],
     type: "Personal",
     githubLink: "https://github.com/externalPointerVariable/Mundane.io",
     liveLink: "https://mundane-io.vercel.app/",

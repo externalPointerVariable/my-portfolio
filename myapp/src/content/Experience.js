@@ -16,7 +16,7 @@ const experiences = [
   {
     period: "Sep 2023 - Feb 2024",
     title: "Core Developer",
-    company: "oSC GGSIPU-EDC, Delhi",
+    company: "IoSC GGSIPU-EDC, Delhi",
     description:
       "Worked on several real-world project with collaboration of industry",
   },
