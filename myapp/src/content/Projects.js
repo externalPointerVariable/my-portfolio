@@ -10,8 +10,11 @@ import MundaneBanner from "../assets/project/banner/MundaneBanner.png";
 import Mlbquiz from "../assets/project/images/Mlbquiz.jpg";
 import MlbquizBanner from "../assets/project/banner/MlbquizBanner.png";
 
-import Speedy from '../assets/project/images/Speedy.webp';
-import SpeedyBanner from '../assets/project/banner/SpeedyBanner.webp';
+import Speedy from "../assets/project/images/Speedy.webp";
+import SpeedyBanner from "../assets/project/banner/SpeedyBanner.webp";
+
+import PortfolioBackend from "../assets/project/images/PortfolioBackend.png";
+import PortfolioBackendBanner from "../assets/project/banner/PortfolioBackendBanner.png";
 
 const categories = [
   "All",
@@ -23,6 +26,18 @@ const categories = [
 ];
 
 const projects = [
+  {
+    name: "Portfolio Backend",
+    category: "Full Stack Development",
+    image: PortfolioBackend,
+    banner: PortfolioBackendBanner,
+    description:
+      "This is the backend of my portfolio website, which is built using Django , Css, and Javascript. It leverage the power of django admin panel to manage all the details from the deployment itself, no need to redeploy continuously after every change. 🚅",
+    techStack: ["Django", "Python", "CSS", "Javascript", "Sqlite"],
+    type: "Personal",
+    githubLink: "https://github.com/externalPointerVariable/Portfolio-With-Backend",
+    liveLink: "https://portfolio-with-backend-cle7.onrender.com/",
+  },
   {
     name: "Lawverse",
     category: "AI & Machine Learning",
