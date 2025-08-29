@@ -16,13 +16,16 @@ import SpeedyBanner from "../assets/project/banner/SpeedyBanner.webp";
 import PortfolioBackend from "../assets/project/images/PortfolioBackend.png";
 import PortfolioBackendBanner from "../assets/project/banner/PortfolioBackendBanner.png";
 
+import DynamicEcom from "../assets/project/images/DynamicEcom.png";
+import DynamicEcomBanner from "../assets/project/banner/DynamicEcomBanner.png";
+
 const categories = [
   "All",
-  "Blog",
   "Full Stack Development",
   "Frontend Development",
   "Backend Development",
   "AI & Machine Learning",
+  "Cloud & Devops",
 ];
 
 const projects = [
@@ -103,6 +106,17 @@ const projects = [
     type: "Personal Project",
     githubLink: "https://github.com/externalPointerVariable/DiscordWPMBot",
     liveLink: "https://discord.gg/Rt28h4Hb",
+  },
+  {
+    name: "Dynamic E-Commerce",
+    category: "Cloud & Devops",
+    image: DynamicEcom,
+    banner: DynamicEcomBanner,
+    description: "This is a fully dynamic and responsive open-source e-commerce website. The platform is deployed to the AWS cloud, leveraging its robust services to ensure high availability and scalability. It features a streamlined user experience, and a dynamic product catalog. The project highlights a cloud deployment, and the deployment of a seamless, production-ready application.",
+    techStack: ["AWS", "Node.js", "React", "Express", "Open Source", "PM2", "Nginx"],
+    type: "Personal Project",
+    githubLink: "https://github.com/externalPointerVariable/e-commerce-store",
+    liveLink: "http://54.167.238.111/"
   },
 ];
 
