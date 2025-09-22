@@ -2,7 +2,7 @@ import { FileDown } from "lucide-react";
 import { FaInstagram, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Resume from "../assets/resume/Abhishek_Thakur_resume.pdf";
-import Profile from "../assets/profile/images/profile.jpeg";
+import Profile from "../assets/profile/images/profile.png";
 import { Particle } from "../components/index";
 
 const fadeInUp = {
